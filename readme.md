@@ -2,7 +2,7 @@
 ![](https://img.shields.io/travis/USER/REPO.svg)
 ## 运行
 ```
-python manager runserver
+python manage.py runserver
 ```
 ## 截图
 ![img](https://i.loli.net/2018/05/20/5b017279bbbad.png)
