@@ -1,0 +1,20 @@
+<nav>
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo">BBTust</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                {% if login_data.0 == "login" %}
+                <li><a href="#modal1">{{ login_data.0 }}</a></li>
+                {% else %}
+                <li><a href="#">{{ login_data.0 }}</a></li>
+                {% endif %}
+
+                {% if login_data.1 == "register" %}
+                <li><a href="#modal2">{{ login_data.1 }}</a></li>            
+                {% else %}
+                <li><a href="/{{ login_data.1 }}">{{ login_data.1 }}</a></li>            
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

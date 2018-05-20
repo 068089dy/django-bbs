@@ -1,0 +1,40 @@
+<div id="modal_comment" class="modal">
+    <form method="post" action="/comment/">
+        {% csrf_token %}
+        <div class="modal-content">
+            <h5>评论</h5>
+        <!-- <div class="container  s6 offset-s3"> -->
+    
+            <div class="input-field">
+                <textarea id="content" class="materialize-textarea" type="text" name="content" class="validate"></textarea>
+                <label for="content">文本域</label>
+            </div>
+            <input type="hidden" name="father_id" value="{{ h.id }}">
+            <button class="btn waves-effect waves-light" type="submit" name="action">提交
+                <i class="material-icons right">send</i>
+            </button>
+            
+        </div>
+    <!-- </form> -->
+    </div>
+    <!-- <script>
+        $('#submit_btn').onclick(post1({{ h.id }}));
+        console.log("hello");
+        function post1(id){
+            var id = id;
+            var content = $('#content').val();
+                        
+            $.ajax({
+                url:"/comment/",
+                type:"post",
+                data:{
+                    csrfmiddlewaretoken:$("input:first").val(),
+                    "father_id": id,
+                    "content": content
+                },
+                success:function (data) {
+                    alert("success")                        
+                }
+            })
+        }
+    </script> -->

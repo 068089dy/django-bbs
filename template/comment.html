@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% include "header_nav.html" %}
+    {% include "fixed-action-btn.html" %}
+    {% include "modal_post.html" %}
+    {% include "modal_login.html" %}
+    {% include "modal_register.html" %}
+    {% include "modal_search.html" %}
+    {% include "modal_comment.html" %}
+<div class="card z-depth-0 purple lighten-5">
+    <div class="container ">
+        <div class="card-content">
+            <div class="chip">标签1</div>
+            <div class="chip">标签2</div>                    
+            <h4 id="123">{{ h.title }}</h4>
+            <p>{{ h.content }}</p>
+        </div>
+        <div class="card-content">
+            <a class="waves-effect waves-teal btn-flat  purple lighten-4">关注</a>
+            <a class="waves-effect waves-teal btn-flat  purple lighten-4" href="#modal_comment">评论</a>
+            <a class="waves-effect waves-teal btn-flat"><i class="material-icons left">thumb_up</i>{{ thumb_data.0 }}</a>
+            <a class="waves-effect waves-teal btn-flat"><i class="material-icons left">thumb_down</i>{{ thumb_data.1 }}</a>
+        </div>
+    </div>
+</div>
+            
+
+
+<div class="container">
+    {% for comment in comment_data %}
+    <div class="card z-depth-0 purple lighten-5">
+        <div class="card-content">
+            <div class="chip">
+                <img src="http://pic20.nipic.com/20120419/9861949_223401252147_2.jpg" alt="Contact Person" class="z-depth-1">
+                {{ comment.0 }}
+            </div>
+                    
+            <p>{{ comment.1 }}</p>
+        </div>              
+        <a class="waves-effect btn-flat" id="thumb_up_btn"><i class="material-icons left">thumb_up</i>{{ comment.2 }}</a>
+        <a class="waves-effect btn-flat" id="thumb_down_btn"><i class="material-icons left">thumb_down</i>{{ comment.3 }}</a>         
+    </div>
+    {% endfor %}
+    
+</div>
+       
+
+<script type="text/javascript" src="/static/js/comment.js"></script>
+
+
+
+<!-- 启动模态 -->
+<script>
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,29 @@
+<div id="modal_search" class="modal">
+      
+    <form method="post">
+    {% csrf_token %}
+        <div class="modal-content">
+            <h5>Search</h5>
+            <nav>
+                <div class="nav-wrapper">
+                    <form>
+                        <div class="input-field">
+                            <input id="search" type="search" required>
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i class="material-icons">close</i>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+            <div class="row">
+                <p class="valign">热搜</p>
+                <a class="row">1.玩LoL拿了巨大优势的人，为什么还要嘲讽对面，这是什么心理？</a>
+                <a class="row">2.为什么普及 Linux 桌面操作系统这么难呢？</a>
+                <a class="row">3.如何系统地自学 Python？</a>
+                <a class="row">4.中国黑客做过什么最辉煌的事情？</a>
+            </div>
+            
+        </div>
+    </form>
+
+</div>
