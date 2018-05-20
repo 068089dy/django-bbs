@@ -1,5 +1,5 @@
 [![python3.5](https://img.shields.io/badge/python-3.5-brightgreen.svg)]()
-[![](https://img.shields.io/travis/USER/REPO.svg)]
+![](https://img.shields.io/travis/USER/REPO.svg)
 ## 运行
 ```
 python manager runserver
